@@ -1,0 +1,18 @@
+<div class="countainer">
+    <div class="card-img">
+        <img [src]="user.picture" alt="">
+    </div>
+    <div class="card-body">
+        <div class="card-name">
+            <h2>{{user.name}}</h2>
+        </div>
+        <div>
+            <p class="card-age" [hidden]="user.hide">{{user.age}} ans</p>
+            <button (click)="showAge()">Toggle</button>
+        </div> 
+        <div>
+            <input class="card-quote" type="text" [(ngModel)]="user.quote">
+            <p>{{user.quote}}</p>
+        </div>
+    </div>
+</div>
